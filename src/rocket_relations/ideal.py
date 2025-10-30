@@ -64,5 +64,5 @@ def thrustCoeff(pep0, pap0, AeAstar, gamma):
     if gamma <= 1:
         raise ValueError("Specific heat ratio must be greater than 1.")
 
-    Cf = np.sqrt(((2*(gamma**2))/(gamma-1)) * ((2/(gamma+1))**((gamma+1)/(gamma-1))) * (1-(pep0/pap0)**((gamma-1)/gamma))) + ((pep0-pap0)*AeAstar)
+    Cf = np.sqrt(((2*(gamma**2))/(gamma-1)) * ((2/(gamma+1))**((gamma+1)/(gamma-1))) * (1-(pep0)**((gamma-1)/gamma))) + ((pep0-pap0)*AeAstar)
     return Cf
